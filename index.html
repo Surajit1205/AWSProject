@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Calculator using AWS</title>
+    <!-- Styling for the client UI -->
+    <style>
+    h2 {
+        color: #4B0082;
+        font-family: system-ui;
+		margin-left: 20px;
+        }
+	h2 [type="intro"]{
+		color: #4B0082;
+        font-family: system-ui;
+		margin-left: 00px;
+		}
+	body {
+        background-color: #FFE4E1;
+        }
+    label {
+        color: #000000;
+        font-family: system-ui;
+        font-size: 20px;
+        margin-left: 20px;
+		margin-top: 10px;
+        }
+		label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+	 input {
+        color: #000000;
+        font-family: system-ui;
+        font-size: 20px;
+        margin-left: 5px;
+		margin-top: 5px;
+		width: 30px;
+        }
+	.container {
+      max-width: 300px;
+      margin: 50px auto;
+      padding: 40px;
+      background-color: #90EE90;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+    }
+	button[type="button"] {
+      background-color: #007bff;
+      color: #fff;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button[type="button"]:hover {
+      background-color: #056608;
+    }
+	button[type="clr"] {
+      background-color: #007bff;
+      color: #fff;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+	button[type="clr"]:hover {
+		background-color: #ff0000;
+    }
+	input[type="text"] {
+      width: 80%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    </style>
+    <script>
+        // callAPI function that takes the base and exponent numbers as parameters
+        var callAPI = (base,exponent)=>{
+            // instantiate a headers object
+            var myHeaders = new Headers();
+            // add content type header to object
+            myHeaders.append("Content-Type", "application/json");
+            // using built in JSON utility package turn object to string and store in a variable
+            var raw = JSON.stringify({"base":base,"exponent":exponent});
+            // create a JSON object with parameters for API call and store in a variable
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            // make API call with parameters and use promises to get response
+            fetch("https://0r0b5nasw3.execute-api.ap-south-1.amazonaws.com/test", requestOptions)
+            .then(response => response.text())
+            .then(result => alert(JSON.parse(result).body))
+            .catch(error => console.log('error', error));
+        }
+    </script>
+	<script>
+        // callAPI function that takes the base and exponent numbers as parameters
+        var callAPI1 = (base,exponent)=>{
+            // instantiate a headers object
+            var myHeaders = new Headers();
+            // add content type header to object
+            myHeaders.append("Content-Type", "application/json");
+            // using built in JSON utility package turn object to string and store in a variable
+            var raw = JSON.stringify({"base":base,"exponent":exponent});
+            // create a JSON object with parameters for API call and store in a variable
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            // make API call with parameters and use promises to get response
+            fetch("https://5qstaz8mfc.execute-api.ap-south-1.amazonaws.com/test", requestOptions)
+            .then(response => response.text())
+            .then(result => alert(JSON.parse(result).body))
+            .catch(error => console.log('error', error));
+        }
+    </script>
+	<script>
+        // callAPI function that takes the base and exponent numbers as parameters
+        var callAPI2 = (base,exponent)=>{
+            // instantiate a headers object
+            var myHeaders = new Headers();
+            // add content type header to object
+            myHeaders.append("Content-Type", "application/json");
+            // using built in JSON utility package turn object to string and store in a variable
+            var raw = JSON.stringify({"base":base,"exponent":exponent});
+            // create a JSON object with parameters for API call and store in a variable
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            // make API call with parameters and use promises to get response
+            fetch("https://wvs1863idi.execute-api.ap-south-1.amazonaws.com/test", requestOptions)
+            .then(response => response.text())
+            .then(result => alert(JSON.parse(result).body))
+            .catch(error => console.log('error', error));
+        }
+    </script>
+	<script>
+        // callAPI function that takes the base and exponent numbers as parameters
+        var callAPI3 = (base,exponent)=>{
+            // instantiate a headers object
+            var myHeaders = new Headers();
+            // add content type header to object
+            myHeaders.append("Content-Type", "application/json");
+            // using built in JSON utility package turn object to string and store in a variable
+            var raw = JSON.stringify({"base":base,"exponent":exponent});
+            // create a JSON object with parameters for API call and store in a variable
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            // make API call with parameters and use promises to get response
+            fetch("https://xxh4iw2wkf.execute-api.ap-south-1.amazonaws.com/test", requestOptions)
+            .then(response => response.text())
+            .then(result => alert(JSON.parse(result).body))
+            .catch(error => console.log('error', error));
+        }
+    </script>
+	<script>
+        // callAPI function that takes the base and exponent numbers as parameters
+        var callAPI4 = (base,exponent)=>{
+            // instantiate a headers object
+            var myHeaders = new Headers();
+            // add content type header to object
+            myHeaders.append("Content-Type", "application/json");
+            // using built in JSON utility package turn object to string and store in a variable
+            var raw = JSON.stringify({"base":base,"exponent":exponent});
+            // create a JSON object with parameters for API call and store in a variable
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            // make API call with parameters and use promises to get response
+            fetch("https://thpfjjxwih.execute-api.ap-south-1.amazonaws.com/test", requestOptions)
+            .then(response => response.text())
+            .then(result => alert(JSON.parse(result).body))
+            .catch(error => console.log('error', error));
+        }
+    </script>
+
+    <script>
+        function clearTextBox() {
+            document.getElementById("base").value = "";
+			document.getElementById("exponent").value = "";
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <h2>AWS Project<br>(Basic Calculator)</h2>
+	<form>
+		<label>1st number:</label>
+        <input type="text" id="base" required>
+        <br><label>2nd number:</label>
+        <input type="text" id="exponent" required><br><br>
+        <!-- set button onClick method to call function we defined passing input values as parameters -->
+        <button type="button" onclick="callAPI1(document.getElementById('base').value,document.getElementById('exponent').value)">       Addition      (X+Y)</button>
+		<button type="button" onclick="callAPI2(document.getElementById('base').value,document.getElementById('exponent').value)">Subtraction   (X-Y)</button><br><br>
+		<button type="button" onclick="callAPI3(document.getElementById('base').value,document.getElementById('exponent').value)">Multiplication(X*Y)</button>
+		<button type="button" onclick="callAPI4(document.getElementById('base').value,document.getElementById('exponent').value)">Division      (X/Y)</button><br><br>
+		<button type="button" onclick="callAPI(document.getElementById('base').value,document.getElementById('exponent').value)">Power of(X^Y)            </button>
+		<button type="clr" onclick="clearTextBox()">Clear</button>
+	</form>
+	</div>
+	<h2 type="intro">Presented by: <u><i>Surajit Kundu.</i></u></h2>
+	  <h3>B.Tech in CSE from BUIE.</h2>
+	  <pre><h3>Internship on AWS
+Ardent Computech PVT. LTD.
+Under the guidence of <u>MOUPIA BAKSHI ma'am</u></h3>
+	  </pre>
+
+</body>
+</html>
